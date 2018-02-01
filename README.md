@@ -10,6 +10,6 @@ The new Godot 3 DLL build will be in synch with 3.1 - dev.
 ## Further development plans:
 + Delay load of DLL's
 + No need to recompile Godot if extending Godot's class hierachy.
-+ More Langiage Bindings tighter integrated with Godot:
++ More Language Bindings tighter integrated with Godot:
   + JavaScript ( based on MS-Chakra )
   + Smalltalk ( JIT-compiled )
