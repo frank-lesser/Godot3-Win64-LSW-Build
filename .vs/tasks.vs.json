@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-Godot3.1dev-dllbuild-lsw-Win64-pdb",
+      "appliesTo": "Godot3.1dev-dllbuild-lsw-Win64-pdb.7z",
+      "type": "launch"
+    }
+  ]
+}
