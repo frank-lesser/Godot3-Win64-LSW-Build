@@ -6,7 +6,7 @@ The development cycle has speed up enormously. There is no need to recompile God
 
 Godot3.1dev-dllbuild-lsw-Win64.7z ( without Mono ) :
 
-+ Godot3-LSW.exe (383 KB) with 101 DLL's
++ Godot3-LSW.exe (~400 KB) with 104 DLL's
 based on [master commit **79f48cd** v. 14.2.2018](https://github.com/godotengine/godot/commit/79f48cde3d9c47e64cca6090c3db0bff1c9e557f)
 
 The build contains pythonscript.dll which allows to use PythonScript.
@@ -14,7 +14,7 @@ It is based on Python 3.64. No Installation of Python is needed. The Python 3 in
 **PythonScript is not functional yet.**
 
 
-## New in build v. 2018-2-16
+## New in build v. 2018-2-18
 This build contains the possibility to get meaningful stack-trackes in case of crashes. 
 
 Download [the pdb 7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z), unzip it into the folder of **Godot3-lsw.exe**. In case of an engine crash you should see the execution-stack in the log.
@@ -27,7 +27,9 @@ The next major update which contains also 7z infrastructure is planned for end o
   + one set of DLLs for Editor & Runtime
   + Dynamic registration of DLLs
   + DLL-Versioning & Auto updater
-  + Win64 debug builds, Win32 build & debug builds
++ Win64 debug builds, Win32 build & debug builds, ARM64 builds
++ **Godot3-LSW SDK** ( source-compatible to 3.1dev-master, allows C++ programming in Godot3 without GDNative )
++ Godot-Boost C++ extension
 
 + More Language Bindings tighter integrated with Godot:
   + JavaScript ( based on MS-Chakra )
@@ -37,4 +39,4 @@ The next major update which contains also 7z infrastructure is planned for end o
   Just in time compilaton based on our Smalltalk-JIT will speed up GDScript.
 + New Memory allocators
 
-  experimiental faster allocation of Objects
+  experimental faster allocation of Objects
