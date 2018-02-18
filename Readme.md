@@ -7,7 +7,7 @@ The development cycle has speed up enormously. There is no need to recompile God
 Godot3.1dev-dllbuild-lsw-Win64.7z ( without Mono ) :
 
 + Godot3-LSW.exe (~400 KB) with 104 DLL's
-based on [master commit **79f48cd** v. 14.2.2018](https://github.com/godotengine/godot/commit/79f48cde3d9c47e64cca6090c3db0bff1c9e557f)
+based on [master commit **d5eba83** v. 18.2.2018](https://github.com/godotengine/godot/commit/d5eba83fd57005c110ef594f90c84016b758a0d5)
 
 The build contains pythonscript.dll which allows to use PythonScript.
 It is based on Python 3.64. No Installation of Python is needed. The Python 3 interpreter is included in the PythonScript.dll and the Python-runtime is in Python-Runtime-3.64.7z. 
