@@ -6,7 +6,7 @@ The development cycle has speed up enormously. There is no need to recompile God
 
 Godot3.1dev-dllbuild-lsw-Win64.7z ( without Mono ) :
 
-+ Godot3-LSW.exe (~400 KB) with 104 DLL's
++ Godot3-LSW.exe (~400 KB) with 109 DLL's
 based on [master commit **d5eba83** v. 18.2.2018](https://github.com/godotengine/godot/commit/d5eba83fd57005c110ef594f90c84016b758a0d5)
 
 The build contains pythonscript.dll which allows to use PythonScript.
@@ -14,11 +14,15 @@ It is based on Python 3.64. No Installation of Python is needed. The Python 3 in
 **PythonScript is not functional yet.**
 
 
-## New in build v. 2018-2-18
-This build contains the possibility to get meaningful stack-trackes in case of crashes. 
-
+## New in build v. 2018-2-19
++ Now you can switch the Video driver (GLES2 - DX11-Angel based & GLES3 GD3 original are possible look at **video-driver-settings.txt**)
++ This build contains the possibility to get meaningful stack-trackes in case of crashes.
 Download [the pdb 7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z), unzip it into the folder of **Godot3-lsw.exe**. In case of an engine crash you should see the execution-stack in the log.
+To see a stack-trace use the **Godot3-lsw-console.exe**.
 
+## Things not working in build v. 2018-2-19
++ audio is only WAV ( Module_ogg.dll has no registered formats - will be changed in next build )
++ PythonScript ( already presend in Script Listbox in the editor')  is not working yet.
 
 The next major update which contains also 7z infrastructure is planned for end of February 2018:
 
