@@ -6,25 +6,35 @@ The development cycle has speed up enormously. There is no need to recompile God
 
 Godot3.1dev-dllbuild-lsw-Win64.7z ( without Mono ) :
 
-+ Godot3-LSW.exe (~400 KB) with 109 DLL's
-based on [master commit **d5eba83** v. 18.2.2018](https://github.com/godotengine/godot/commit/d5eba83fd57005c110ef594f90c84016b758a0d5)
++ Godot3-LSW.exe (~500 KB) with 153 DLL's
+based on [master commit **edd0727** v. 22.2.2018](https://github.com/godotengine/godot/commit/edd07270c22b77b07eda0a67f90c0ccf03176fd2)
 
 The build contains pythonscript.dll which allows to use PythonScript.
 It is based on Python 3.64. No Installation of Python is needed. The Python 3 interpreter is included in the PythonScript.dll and the Python-runtime is in Python-Runtime-3.64.7z. 
 **PythonScript is not functional yet.**
 
 
-## New in build v. 2018-2-19
-+ Now you can switch the Video driver (GLES2 - DX11-Angel based & GLES3 GD3 original are possible look at **video-driver-settings.txt**)
+## New in build v. 2018-2-22
++ Now you can switch the Video driver (GLES2 - DX11-ANGLE based & GLES3 GD3 original are possible look at **video-driver-settings.txt**)
 + This build contains the possibility to get meaningful stack-trackes in case of crashes.
 Download [the pdb 7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z), unzip it into the folder of **Godot3-lsw.exe**. In case of an engine crash you should see the execution-stack in the log.
 To see a stack-trace use the **Godot3-lsw-console.exe**.
 
-## Things not working in build v. 2018-2-19
-+ audio is only WAV ( Module_ogg.dll has no registered formats - will be changed in next build )
+## Things added between 2018-2-18 and v. 2018-2-22
++ Sync with latest dev-master, nearly 120 commits.
++ Split of the monolythic editor.dll which was 16mb, every plugin is now contained in its own DLL.
+
+## Things not tested in build v. 2018-2-20
++ GLES2 video driver, it is linked in and can be choosen in the **editor_settings-3-lsw.tres**, the file you find under **C:\Users\<Your UserName>\AppData\Roaming\Godot**
+
+## Things not working in build v. 2018-2-20
+
 + PythonScript ( already presend in Script Listbox in the editor')  is not working yet.
 
-The next major update which contains also 7z infrastructure is planned for end of February 2018:
+## The next major is planned for end of February 2018:
++ Pythonscript, based on Python 3.8
++ 7z infrastructure, allowing all resources to be in 7z format.
++ Mono DLL
 
 ## Further development plans:
 + Preload and delay load of Godot DLL's & own DLLs.
