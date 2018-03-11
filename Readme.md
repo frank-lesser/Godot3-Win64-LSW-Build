@@ -5,9 +5,9 @@ The new Godot 3.1-dev DLL build will be in synch with 3.1 - dev.
 It is build from a MSVC 2017 solution with over 200 sub-projects.
 The main intention is to allow a faster engine-development & produce an Godot executable which is small and startup fast and can be easily updated by replacing small DLL's. While my current build is Windows focused I keep attention not to loose the "**run everywhere**" strategy - but it will made differently - building all versions with MSVC (X Versions will load the DLLs ( deployed as special Binary Blobs ).
 
-[Godot3-lsw.exe with DLLs](https://github.com/frank-lesser/Godot3.1dev-dllbuild-lsw-Win64.7z) ( without Mono ) [7z-zipped](http://7-zip.org/download.html) :
+[Godot3-lsw.exe with DLLs](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z) ( without Mono ) [7z-zipped](http://7-zip.org/download.html) :
 
-**important** the main.dll was build with hardcoded Python-development. please after install unzip [update-main-dll.7z](https://github.com/frank-lesser/update-main-dll.7z)
+**important** the main.dll was build with hardcoded Python-development. please after install unzip [update-main-dll.7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/update-main-dll.7z)
 into the executable folder to get the engine started **
 
 + Godot3-LSW.exe (~500 KB) with 181 DLL's
@@ -20,7 +20,8 @@ It is based on Python 3.64. No Installation of Python is needed. The Python 3 in
 
 ## New in build v. 2018-3-11
 + the build has been synchronized with 3.02
-+ A [Windows Export template](https://github.com/frank-lesser/Godot3.1dev-dllbuild-lsw-Win64.tpz) has been added.
++ A [Windows Export template](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.tpz) has been added.
+**important** the export template is just a zip file - please replace the aall files from the mentioned update **update-main-dll.7z** also in that template.
 
   Install from GD-Editor - Menu Editor - Manage Export Templates - Install from File
 
