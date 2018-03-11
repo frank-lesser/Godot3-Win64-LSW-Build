@@ -5,7 +5,7 @@ The new Godot 3.1-dev DLL build will be in synch with 3.1 - dev.
 It is build from a MSVC 2017 solution with over 200 sub-projects.
 The main intention is to allow a faster engine-development & produce an Godot executable which is small and startup fast and can be easily updated by replacing small DLL's. While my current build is Windows focused I keep attention not to loose the "**run everywhere**" strategy - but it will made differently - building all versions with MSVC (X Versions will load the DLLs ( deployed as special Binary Blobs ).
 
-[Godot3-lsw.exe with DLLs](https://github.com/frank-lesser/Godot3.1dev-dllbuild-lsw-Win64.tpz) ( without Mono ) [7z-zipped](http://7-zip.org/download.html) :
+[Godot3-lsw.exe with DLLs](https://github.com/frank-lesser/Godot3.1dev-dllbuild-lsw-Win64.7z) ( without Mono ) [7z-zipped](http://7-zip.org/download.html) :
 
 **important** the main.dll was build with hardcoded Python-development. please after install unzip [update-main-dll.7z](https://github.com/frank-lesser/update-main-dll.7z)
 into the executable folder to get the engine started **
