@@ -7,6 +7,9 @@ The main intention is to allow a faster engine-development & produce an Godot ex
 
 [Godot3-lsw.exe with DLLs](https://github.com/frank-lesser/Godot3.1dev-dllbuild-lsw-Win64.tpz) ( without Mono ) [7z-zipped](http://7-zip.org/download.html) :
 
+**important** the main.dll was build with hardcoded Python-development. please after install unzip [update-main-dll.7z](https://github.com/frank-lesser/update-main-dll.7z)
+into the executable folder to get the engine started **
+
 + Godot3-LSW.exe (~500 KB) with 181 DLL's
 based on [master commit **aeb1c67** v. 11.3.2018](https://github.com/godotengine/godot/commit/aeb1c67b5b55c769256a8ffc2f9d9095d6fc74da)
 
