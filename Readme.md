@@ -28,7 +28,7 @@ It is based on Python 3.64. No Installation of Python is needed. The Python 3 in
 Download [the pdb 7z](https://github.com/frank-lesser/https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z), unzip it into the folder of **Godot3-lsw.exe**. In case of an engine crash you should see the execution-stack in the log.
 To see a stack-trace use the **Godot3-lsw-console.exe**.
 
-## changes wrt. [Godot 3.1 dev-master](https://github.com/godotengine/godot)
+## changes wrt. [Godot 3.1 dev-master](https://github.com/godotengine/godot) see new [Changelog](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/changlog.md)
 
 + Prelimary Language Bindings 
   + Python integration - python files can be edited now in the GD Editor.
