@@ -17,7 +17,6 @@ Unzip in a new folder. The build contains pythonscript.dll which will allow in a
 It is based on Python 3.64. No Installation of Python is needed. The Python 3 interpreter is included in the ***Module_PythonScript.dll***.
 
 
-
 ## New in build v. 2018-3-11
 + the build has been synchronized with 3.02
 + A [Windows Export template](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.tpz) has been added.
@@ -26,7 +25,7 @@ It is based on Python 3.64. No Installation of Python is needed. The Python 3 in
   Install from GD-Editor - Menu Editor - Manage Export Templates - Install from File
 
 + This build contains the possibility to get meaningful stack-trackes in case of crashes.
-Download [the pdb 7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z), unzip it into the folder of **Godot3-lsw.exe**. In case of an engine crash you should see the execution-stack in the log.
+Download [the pdb 7z](https://github.com/frank-lesser/https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z), unzip it into the folder of **Godot3-lsw.exe**. In case of an engine crash you should see the execution-stack in the log.
 To see a stack-trace use the **Godot3-lsw-console.exe**.
 
 ## changes wrt. [Godot 3.1 dev-master](https://github.com/godotengine/godot)
