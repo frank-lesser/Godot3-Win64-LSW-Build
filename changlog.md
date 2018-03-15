@@ -1,4 +1,4 @@
-# 12.3.2018 (not yet published)
+# 15.3.2018
 + Added Environment Variables
   + **GODOT_LSW_PATH** has priority over APPDATA
   + **GODOT_LSW_DATA_PATH**
@@ -6,23 +6,29 @@
 
   the new Environment Variables are useful if you have more than 1 Project which uses GDNative modules & want to use a central place for the GGodot Binaries, Data & Cache.
 
-+ Added new section **preset_modules** under Editor.settings (**editor-settings-3-lsw.tres**)
++ Section **[singletons**] in project.godot
 
   Since the build allows now dynamic loading of former statically imported DLLs under this section DLLs and plugins will be listed which are not belonging to the editors base configuration.
 
-+ Added [GD-modules.7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/GD-modules.7z) which provides sample code for the new features.
-+ Modules converted to GDNative:
-  + ENet
+        [gdnative]
+        singletons = [ "res://gd-modules/enet.gdnlib", "res://gd-modules/openssl.gdnlib" ]
 
-    ENet is no longer part of the core Engine. To use the **NetworkedMultiplayerENet** class you need to load the ENet GDNative Module:
++ Added [GD-Projects.7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/GD-modules.7z) which provides sample code for the new features.
++ All Modules converted to GDNative:
+  + For example ENet is now no longer part of the core GD3-LSW engine
+    To use the **NetworkedMultiplayerENet** class you need to load the ENet GDNative Module:
 
         var enet_module = preload("user://gd-modules/enet.gdns");
 
     The adopted example is provided under GD-Projects/networking/multiplayer_pong
-+ Theora
+
+    For the editor enet is a preloaded singleton in the main ***project.godot***. If it is omitted from the ***[singletons]*** section, the Asset Library Tab will not show in the Project-Manager.
+
+  + GD-Editor only GD-Native extensions
+    + Theora
 
     The Video imported is a GD-Editor only extension. To add it under the section preset_modules in **editor-settings-3-lsw.tres**
-            Therora = "user://gd-modules/editor/Module_theora.dll"
+            Therora = "res://gd-modules/editor/Module_theora.gdns"
 + New Modules added to GDNative:
   + SQLite
 
@@ -56,5 +62,5 @@
 # 27.2.2018
 + Added a new Menu **Update** to Editor/help. An currently empty update Dialog is popped up, which will show later new Versions of DLLs found on a [WinSparke](https://winsparkle.org) enabled Server.
 
-#23.2.2018
-+ Added [symbol-files](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64-pdb.7z)
+# 23.2.2018
++ Added [symbol-files](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64-pdb.7z) to enable a memaningful stack-trace
