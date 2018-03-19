@@ -6,17 +6,19 @@ The new Godot 3.1-dev LSW build will be in synch with 3.1 - dev.
 It is build from a **MSVC 2017** solution with over 220 sub-projects.
 The main intention is to allow a faster engine-development & produce an Godot executable which is small and startup fast and can be easily updated by replacing small DLL's.
 
-The modularized build has many advatages. The Godot-engine needs not to be rebuild i new modules are addes. New modules are simply added by "preloading them in the **[singletons]** section of the ***project.godot*** file, or dynamically by adding a preload statement at the beginning of the GDScript using the GDNative class like in **lobby.gd**
+The modularized build has many advantages. The Godot-engine must not to be rebuild if new modules are added. New libraries can be used by "preloading them in the **[singletons]** section of the ***project.godot*** file, or dynamically by adding a preload statement at the beginning of the GDScript using the GDNative class like in **lobby.gd**
  of
 
 ***[GD-Projects/networking/multiplayer_pong]***
 
       # Enet library
-      var enet_module = preload("res:://bin/enet.gdns");
+      var enet_module = preload("res://bin/enet.gdns");
 
-This introduces an incompatibility to the Godot3 main build since all scripts which accesses classes defined in modules needs explicitly to refer those either in the script of in the **[singletons]** section.
+This introduces a small ***incompatibility*** to the Godot3 main build since all scripts which accesses classes defined in modules needs explicitly to refer those either in the script of in the **[singletons]** section.
 
-Also allmost all of the othe DLLs currently contained in the root-folder and loaded at engine startup by Windows-Process Loadeer will be converted to GD-native DLLs. This is already done for **Scene_2d.dll** and **Scene_3d**, 
+Also allmost all of the other DLLs currently contained in the root-folder and loaded at engine startup by Windows-Process Loader will be converted to GD-CPP-Native DLLs. This is already done for **Scene_2d.dll** and **Scene_3d**. Others like the **Scene_GUI** will be dynamically loadable soon, enabling small sized Godot3 runtimes.
+
+**Caution:** GD-CPP-Native is not the same as GD-Native. for loading the GD-CPP-Native DLLs the Resource-loading syntax (preload, load) is resued.
 
 ## New in build v. 2018-3-19
 + the build has been synchronized with 3.02 dev-master commit [61e95fc](https://github.com/godotengine/godot/commit/61e95fc0bb9d52fa2c0dd62fa4110fad0171fcfe)
@@ -50,7 +52,7 @@ The following modules are WIP and will be published soon:
   It is based on Python 3.64. No Installation of Python is needed. The Python 3 interpreter is included in the ***Module_PythonScript.dll***.
 
 + [GoogleTest](https://github.com/google/googletest)
-+ Steam
++ [Steam SDK](https://partner.steamgames.com/doc/sdk)
 
   based on Steam SDK 1.42.
   the Functions & Features listed in [GodotSteam](https://gramps.github.io/GodotSteam/) should work on the Steam class instance.
