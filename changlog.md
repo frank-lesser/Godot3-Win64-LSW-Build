@@ -1,3 +1,11 @@
+# 19.3.2018
++ Added libopenmpt
++ Added mono
++ improved LuaScript
++ changed ERR_*, WARN_* logging & **call_deferred** to use the new project.godot logging options.
++ added Smaple projects in Projects.7z
++ Engine Refactorings to load more DLLs as GD-CPP-Natives
+
 # 15.3.2018
 + Added Environment Variables
   + **GODOT_LSW_PATH** has priority over APPDATA
