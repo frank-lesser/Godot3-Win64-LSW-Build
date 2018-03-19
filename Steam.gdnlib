@@ -1,0 +1,10 @@
+[general]
+
+singleton=true
+load_once=true
+
+[entry]
+Windows.64="res://bin/Module_Steam.dll"
+
+[dependencies]
+Windows=[]
