@@ -38,6 +38,8 @@ The latest build comes with new GD-Native DLLs which are in the subfolder ***gd-
 
   demo in ***GD-Projects/SQLite***
 
++ [Steam SDK](https://partner.steamgames.com/doc/sdk)
+
 + Midi - without example based on [RTMidi](https://github.com/thestk/rtmidi), the tests from **rtmidi/tests/** needs to be converted to GDScript.
 
 The following modules are WIP and will be published soon:
@@ -52,7 +54,6 @@ The following modules are WIP and will be published soon:
   It is based on Python 3.64. No Installation of Python is needed. The Python 3 interpreter is included in the ***Module_PythonScript.dll***.
 
 + [GoogleTest](https://github.com/google/googletest)
-+ [Steam SDK](https://partner.steamgames.com/doc/sdk)
 
   based on Steam SDK 1.42.
   the Functions & Features listed in [GodotSteam](https://gramps.github.io/GodotSteam/) should work on the Steam class instance.
@@ -68,7 +69,7 @@ While my current build is Windows focused I keep attention not to loose the "**r
 Download [the pdb 7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64-pdb.7z), unzip it into the folder of **Godot3-lsw.exe**. In case of an engine crash you should see the execution-stack in the log.
 To see a stack-trace use the **Godot3-lsw-console.exe**.
 
-+ it is now possible to specify wheter warnings/errors/failures shold be logged in extended 8 including source file-name ) or short form:
++ it is now possible to specify wheter warnings/errors/failures should be logged in extended (including source file-name ) or short form:
 
       logging/file_logging/enable_file_logging = true
       logging/file_logging/log_path = "C:/Dev/Godot3-LSW//godot-log.txt"
