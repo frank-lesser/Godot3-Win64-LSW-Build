@@ -1,4 +1,4 @@
-# 24.5.2018
+# 24.3.2018
 + Converted various Modules found on Github ( if still for 2.x converted to 3.x ) to **GD-CPP-Native** DLLs:
   + PDF based on libharu ( not tested yet )
   + NativeDiallogs ( contains FileDialog, ColorDialog & MessageDialog )
