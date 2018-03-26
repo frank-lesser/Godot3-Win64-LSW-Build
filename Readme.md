@@ -1,12 +1,13 @@
 # Godot 3.1-dev-Win64-LSW-Build
 Modularized Win x64 build of Godot 3.1-dev - without SCons
 
-The new Godot 3.1-dev LSW build will be in synch with 3.1 - dev.
+The new [Godot 3.1-dev LSW build](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z) will be in synch with 3.1 - dev. Here is a [detailed explanation](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/GD-LSW-CPP-Native.md) about the build.
+
 
 It is build from a **MSVC 2017** solution with over 220 sub-projects.
-The main intention is to allow a faster engine-development & produce an Godot executable which is small and startup fast and can be easily updated by replacing small DLL's.
+The main intention is to allow a faster engine-development & produce an Godot executable which is small and startup fast and can be easily updated & extended by replacing or adding small DLL's.
 
-The modularized build has many advantages. The Godot-engine must not to be rebuild if new modules are added. New libraries can be used by "preloading them in the **[singletons]** section of the ***project.godot*** file, or dynamically by adding a preload statement at the beginning of the GDScript using the GDNative class like in **lobby.gd**
+The modularized build has many advantages. The Godot-engine must not be rebuild if new modules are added. New libraries can be used by preloading them in the **[singletons]** section of the ***project.godot*** file, or dynamically by adding a preload statement at the beginning of the GDScript using the GDNative class like in **lobby.gd**
  of
 
 ***[GD-Projects/networking/multiplayer_pong]***
@@ -20,8 +21,8 @@ Also allmost all of the other DLLs currently contained in the root-folder and lo
 
 **Caution:** GD-CPP-Native is not the same as GD-Native. for loading the GD-CPP-Native DLLs the Resource-loading syntax (preload, load) is resued.
 
-## New in build v. 2018-3-19
-+ the build has been synchronized with 3.02 dev-master commit [61e95fc](https://github.com/godotengine/godot/commit/61e95fc0bb9d52fa2c0dd62fa4110fad0171fcfe)
+## New in build v. 2018-3-26
++ the build has been synchronized with 3.02 dev-master commit [fd79de0](https://github.com/godotengine/godot/commit/fd79de01c20168075dbf425831ac44f2b676f275)
 
 The latest build comes with new GD-Native DLLs which are in the subfolder ***gd-modules***: [Projects.7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/GD-Projects.7z) contains the test & demo projects edited to work with this build of Godot3-LSW
 
@@ -36,11 +37,19 @@ The latest build comes with new GD-Native DLLs which are in the subfolder ***gd-
 
 + [SQLite](https://sqlite.org/) - a SQL database engine 
 
-  demo in ***GD-Projects/SQLite***
+  demo in ***GD-Projects\SQLite***
 
 + [Steam SDK](https://partner.steamgames.com/doc/sdk)
 
 + Midi - without example based on [RTMidi](https://github.com/thestk/rtmidi), the tests from **rtmidi/tests/** needs to be converted to GDScript.
++ [Native-Dialogs](https://github.com/GodotExplorer/NativeDialogs) FileDialog, ColorPicker & MessageDialog  as a start
+
+  demo in ***GD-Projects\GUI\NativeDialogs***
++ [OAML](https://github.com/oamldev/oaml) Open Adaptive Music Library
++ [PDF](https://github.com/resultant-gamedev/GD-PDF) PDF-Creation from Godot
++ [XML Exporter](https://github.com/GodotExplorer/pugixml/tree/master/pugixml) based on [pugixml](https://pugixml.org)
++ various modules found on Github (see changelog.md)
++ Added logging option for **emit_signal**
 
 The following modules are WIP and will be published soon:
 + LuaScript
@@ -78,6 +87,7 @@ To see a stack-trace use the **Godot3-lsw-console.exe**.
       logging/mode/warnings=true #allows filtering of WARN_* entries
       logging/mode/fails=true #allows filtering of FAIL_* entries
       logging/mode/deferred_calls=true #allows filtering of deferred_calls
+      logging/mode/emit_signals=true #allows filtering of emit_signal
 
   + A new command-line argument has been added to make it easier to connect a debugger at startup: IF **-StopMB** is added as the last argument and the ***Godot3-LSW-console.exe*** is used a small MessageBox is displayed at the very beginning of the Engine-startup, allowing to connect Visual-Studio as debugger. Don't forget to install the Symbol-files from the accompanied [the pdb 7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64-pdb.7z) in the root folder to get meaningful debug information.
 
@@ -88,7 +98,7 @@ To see a stack-trace use the **Godot3-lsw-console.exe**.
 + Dynamic loading of almost all DLL's - including DLL-Updater
 
   Currently most of the DLLs are loaded at Enginge-startup. 
-  Dlls in folder **gdGD-Modules** are loaded via the new C++ GDNative mechanismn. I am working on loading almost all Module_*.dlls on demand via the GDNative-C++ mechanismn. GD-Native modules will be downloadable from my side (www.lesser-software.com). The Asset-Library Installer tab in the Project-Manager allows already to select this side for download.
+  Dlls in folder **gd-Modules** are loaded via the new C++ GDNative mechanismn. I am working on loading almost all Module_*.dlls on demand via the GDNative-C++ mechanismn. GD-Native modules will be downloadable from my side (www.lesser-software.com). The Asset-Library Installer tab in the Project-Manager allows already to select this side for download.
 
 + Editor improvements based on [Scite](www.scintilla.org)
 + Debugger improvements ( In-Process Debugger)
@@ -115,5 +125,8 @@ To see a stack-trace use the **Godot3-lsw-console.exe**.
 
 I am working also on a **SDK** for my Godot3-LSW Win x64 build which will allow to add GD-Native modules easily. In contrast to the GD-Native from the main dev you can use the whole GD-class hierarchry without the restriction to have a plain C-Interface. Your GD-Native module can be a C++ DLL.
 The next compiled documentation will contain a Module Item to easily now which module must be preloaded for a certain class. Also The documentation will reflect when methods/classes are only available in my build but not in the main.
+
+## Last minute notes
+*.gdnl and *.gdnslib files in gd-modules subfolder contain hard-coded pathes & need to be adopted to your local nstallatioin path to work.
 
 Please fee free to contact me (email:frank-lesser@lesser-software.com)

@@ -1,3 +1,19 @@
+# 24.5.2018
++ Converted various Modules found on Github ( if still for 2.x converted to 3.x ) to **GD-CPP-Native** DLLs:
+  + PDF based on libharu ( not tested yet )
+  + NativeDiallogs ( contains FileDialog, ColorDialog & MessageDialog )
+  + Voxel, PerlinNoise, Heightmap, OpenSimplex
+  + OAML ( Script test is not fixed yet )
+  + XML Exporter [pugixml](https://pugixml.org)
+ 
++ Fixes Editor crashes due to lazy loading of Plug-Ins
++ Added logging option for **emit_signal**
+
+  Logging of emit_signal can now added to **project.godot**, logging voor connect & disconnect is in preparation
++ Several internal optimizations
++ Internal advances on LuaScript
++ Prepared other modules for inclusion
+
 # 21.3.2018
 + Added Steam
 + Internal engine optimizations
