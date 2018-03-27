@@ -50,7 +50,7 @@
 
     The adopted example is provided under GD-Projects/networking/multiplayer_pong
 
-    For the editor enet is a preloaded singleton in the main ***project.godot***. If it is omitted from the ***[singletons]*** section, the Asset Library Tab will not show in the Project-Manager.
+    For the editor enet is a "preloaded" singleton in the main ***project.godot***. If it is omitted from the ***[singletons]*** section, the Asset Library Tab will not show in the Project-Manager.
 
   + GD-Editor only GD-Native extensions
     + Theora
@@ -68,11 +68,11 @@
 # 11.3.2018
 + added extended logging to Project-Settings file (godot.project)
 
-  it is now possible to specify wheter warnings/errors/failures shold be logged in extended 8 including source file-name ) or short form:
+  it is now possible to specify whether warnings/errors/failures should be logged in extended 8 including source file-name ) or short form:
 
       logging/file_logging/enable_file_logging = true
       logging/file_logging/log_path = "godot-log.txt"
-      logging/mode/short=true # ommits the filname & line-number 
+      logging/mode/short=true # omits the filename & line-number
       logging/mode/errors=true # allows filtering of ERROR_* entries
       logging/mode/warnings=true #allows filtering of WARN_* entries
       logging/mode/fails=true #allows filtering of FAIL_* entries
@@ -88,7 +88,7 @@
 + Added a new **Dlls** Tab to Project-settings. The Tab shows all DLLs, currently loaded
 
 # 27.2.2018
-+ Added a new Menu **Update** to Editor/help. An currently empty update Dialog is popped up, which will show later new Versions of DLLs found on a [WinSparke](https://winsparkle.org) enabled Server.
++ Added a new Menu **Update** to Editor/help. A currently empty update Dialog is popped up, which will show later new Versions of DLLs found on a [WinSparke](https://winsparkle.org) enabled Server.
 
 # 23.2.2018
 + Added [symbol-files](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64-pdb.7z) to enable a memaningful stack-trace

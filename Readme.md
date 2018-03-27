@@ -17,11 +17,12 @@ The modularized build has many advantages. The Godot-engine must not be rebuild 
 
 This introduces a small ***incompatibility*** to the Godot3 main build since all scripts which accesses classes defined in modules needs explicitly to refer those either in the script of in the **[singletons]** section.
 
-Also allmost all of the other DLLs currently contained in the root-folder and loaded at engine startup by Windows-Process Loader will be converted to GD-CPP-Native DLLs. This is already done for **Scene_2d.dll** and **Scene_3d**. Others like the **Scene_GUI** will be dynamically loadable soon, enabling small sized Godot3 runtimes.
+Also almost all of the other DLLs currently contained in the root-folder and loaded at engine startup by Windows-Process Loader will be converted to GD-CPP-Native DLLs. This is already done for **Scene_2d.dll** and **Scene_3d**. Others like the **Scene_GUI** will be dynamically loadable soon, enabling small sized Godot3 runtimes.
 
-**Caution:** GD-CPP-Native is not the same as GD-Native. for loading the GD-CPP-Native DLLs the Resource-loading syntax (preload, load) is resued.
+**Caution:** GD-CPP-Native is not the same as GD-Native. for loading the GD-CPP-Native DLLs the Resource-loading syntax (preload, load) is reused.
 
-## New in build v. 2018-3-26
+## New in build v. 2018-3-27
++ There was a bug preventing the debugger to start in build from 26.3 and a missing DLL ( libGLESv2.dll )
 + the build has been synchronized with 3.02 dev-master commit [fd79de0](https://github.com/godotengine/godot/commit/fd79de01c20168075dbf425831ac44f2b676f275)
 
 The latest build comes with new GD-Native DLLs which are in the subfolder ***gd-modules***: [Projects.7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/GD-Projects.7z) contains the test & demo projects edited to work with this build of Godot3-LSW
@@ -54,7 +55,7 @@ The latest build comes with new GD-Native DLLs which are in the subfolder ***gd-
 The following modules are WIP and will be published soon:
 + LuaScript
 
-  already present as DLL - LUA projects are now recognized & LUA is integrated as a Scripting choise in the GD_Editor. LUA is shown in the GD-Script Editor but can not be executed yet.
+  already present as DLL - LUA projects are now recognized & LUA is integrated as a Scripting choice in the GD_Editor. LUA is shown in the GD-Script Editor but can not be executed yet.
   demo in ***GD-Projects\LuaScript\HelloWorld***
 
 + PythonScript
@@ -82,7 +83,7 @@ To see a stack-trace use the **Godot3-lsw-console.exe**.
 
       logging/file_logging/enable_file_logging = true
       logging/file_logging/log_path = "C:/Dev/Godot3-LSW//godot-log.txt"
-      logging/mode/short=true # ommits the filname & line-number 
+      logging/mode/short=true # omits the filename & line-number
       logging/mode/errors=true # allows filtering of ERROR_* entries
       logging/mode/warnings=true #allows filtering of WARN_* entries
       logging/mode/fails=true #allows filtering of FAIL_* entries
@@ -97,8 +98,8 @@ To see a stack-trace use the **Godot3-lsw-console.exe**.
 ## Features planned
 + Dynamic loading of almost all DLL's - including DLL-Updater
 
-  Currently most of the DLLs are loaded at Enginge-startup. 
-  Dlls in folder **gd-Modules** are loaded via the new C++ GDNative mechanismn. I am working on loading almost all Module_*.dlls on demand via the GDNative-C++ mechanismn. GD-Native modules will be downloadable from my side (www.lesser-software.com). The Asset-Library Installer tab in the Project-Manager allows already to select this side for download.
+  Currently most of the DLLs are loaded at Engine-startup.
+  Dlls in folder **gd-Modules** are loaded via the new C++ GDNative mechanisn. I am working on loading almost all Module_*.dlls on demand via the GDNative-C++ mechanisn. GD-Native modules will be downloadable from my side (www.lesser-software.com). The Asset-Library Installer tab in the Project-Manager allows already to select this side for download.
 
 + Editor improvements based on [Scite](www.scintilla.org)
 + Debugger improvements ( In-Process Debugger)
@@ -123,10 +124,10 @@ To see a stack-trace use the **Godot3-lsw-console.exe**.
 
   + Garbage Collection [Boehm GC](http://www.hboehm.info/gc)
 
-I am working also on a **SDK** for my Godot3-LSW Win x64 build which will allow to add GD-Native modules easily. In contrast to the GD-Native from the main dev you can use the whole GD-class hierarchry without the restriction to have a plain C-Interface. Your GD-Native module can be a C++ DLL.
+I am working also on a **SDK** for my Godot3-LSW Win x64 build which will allow to add GD-Native modules easily. In contrast to the GD-Native from the main dev you can use the whole GD-class hierarchy without the restriction to have a plain C-Interface. Your GD-Native module can be a C++ DLL.
 The next compiled documentation will contain a Module Item to easily now which module must be preloaded for a certain class. Also The documentation will reflect when methods/classes are only available in my build but not in the main.
 
 ## Last minute notes
-*.gdnl and *.gdnslib files in gd-modules subfolder contain hard-coded pathes & need to be adopted to your local nstallatioin path to work.
+*.gdnl and *.gdnslib files in gd-modules sub-folder contain hard-coded paths & need to be adopted to your local installation path to work.
 
 Please fee free to contact me (email:frank-lesser@lesser-software.com)
