@@ -23,7 +23,7 @@ Also almost all of the other DLLs currently contained in the root-folder and loa
 
 ## New in build v. 2018-4-4
 
-+ the build has been synchronized with 3.02 dev-master commit [fd79de0](https://github.com/godotengine/godot/commit/e1fef9bd76ab2fbf7361754165728b9dcb69099b)
++ the build has been synchronized with 3.02 dev-master commit [e1fef9b](https://github.com/godotengine/godot/commit/e1fef9bd76ab2fbf7361754165728b9dcb69099b)
 
 The latest build comes with new GD-Native DLLs which are in the subfolder ***gd-modules***: [Projects.7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/GD-Projects.7z) contains the test & demo projects edited to work with this build of Godot3-LSW
 
