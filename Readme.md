@@ -21,9 +21,9 @@ Also almost all of the other DLLs currently contained in the root-folder and loa
 
 **Caution:** GD-CPP-Native is not the same as GD-Native. for loading the GD-CPP-Native DLLs the Resource-loading syntax (preload, load) is reused.
 
-## New in build v. 2018-3-27
-+ There was a bug preventing the debugger to start in build from 26.3 and a missing DLL ( libGLESv2.dll )
-+ the build has been synchronized with 3.02 dev-master commit [fd79de0](https://github.com/godotengine/godot/commit/fd79de01c20168075dbf425831ac44f2b676f275)
+## New in build v. 2018-4-4
+
++ the build has been synchronized with 3.02 dev-master commit [fd79de0](https://github.com/godotengine/godot/commit/e1fef9bd76ab2fbf7361754165728b9dcb69099b)
 
 The latest build comes with new GD-Native DLLs which are in the subfolder ***gd-modules***: [Projects.7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/GD-Projects.7z) contains the test & demo projects edited to work with this build of Godot3-LSW
 
