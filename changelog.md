@@ -1,3 +1,29 @@
+# 12.4.2018
++ synch with [master ca1312d](https://github.com/godotengine/godot/commit/ca1312dbe95b885786b541220857039f4411bcaa) v. 9.4.2018
+
++ GDScript
+  + performance improvements in method lookup
+  + new binary literals in form 0b[01]*
+
++ GD Classes
+  + Engine.get_profiler()
+
+    answers a Profiler object which measures execution times of internal GD operations.
+  + OS.start_timer_usec(), OS.get_timer_usec()
+
+    timing functions with usec resulution
+
++ LUA-Integration
+
+  LUA can be integrated within GDScript. LuaScript is still WIP.
+
+  from example LUA_HelloWord projectproject in [GD-projects.7z]((https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/GD-projects.7z)) :
+
+      var luaVM_module = preload("/Dev/Godot/Godot3/Godot3-LSW/gd-modules/luavm.gdns");
+      onready var luaVM_instance = GDLuaVM.new()
+      luaVM_instance.run_file("hello_world.lua")
+      String(luaVM_instance.call_function("factorial", 5))
+
 # 4.4.2018
 + Intermediate build & synch with master
   I am still working on LUA integration.
@@ -44,7 +70,7 @@
         [gdnative]
         singletons = [ "res://gd-modules/enet.gdnlib", "res://gd-modules/openssl.gdnlib" ]
 
-+ Added [GD-Projects.7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/GD-modules.7z) which provides sample code for the new features.
++ Added [GD-Projects.7z](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/GD-projects.7z) which provides sample code for the new features.
 + All Modules converted to GDNative:
   + For example ENet is now no longer part of the core GD3-LSW engine
     To use the **NetworkedMultiplayerENet** class you need to load the ENet GDNative Module:
