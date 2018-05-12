@@ -1,6 +1,54 @@
-# 12.4.2018
-+ synch with [master ca1312d](https://github.com/godotengine/godot/commit/ca1312dbe95b885786b541220857039f4411bcaa) v. 9.4.2018
+# 2018-05-12
++ synch with [master 81b1d3c](https://github.com/godotengine/godot/commit/81b1d3c846de263cf843e9e0e9d7c0c0a94f65c8) v. 2018.5.12
+dynamic registration of DLLs ( WIP ), to be able to compose the modularized Godot build DLLs, needed by the application
 
+
+# 2018-04-23
++ synch with [master 1c41953(https://github.com/godotengine/godot/commit/1c419531a009f48aa074f9b5f93b98d387c33723) v. 2018.4.23
++ Engine 
+
+  + Multi-View (WIP)
+    
+    allows to open more than one Window:
+
+        view = View.new()
+	    main_scene = ResourceLoader.load("res://class-browser/main.tscn")
+	    view.create(Rect2(Vector2(100,100), Vector2(400,300)), "test", main_scene)
+
+  + cherry-picks
+
+    GLES3 rasterizer is now in sync with engine
+
++ GDScript
+
+  + dynamic scripting
+
+        extends Control
+        var context = GDScript.new()
+
+        func _ready():
+	      var vi = Engine.get_version_info()
+	      OS.set_window_title("Godot-LSW "+vi["build"])
+        func _on_Button_pressed():
+        #	$result.text = String(perform(self, "answer42"))
+        #	$result.text = String(perform(self, "answer", 42))
+        #	$result.text = String(perform_with_args(self, "ans"+"wer", Array([42])))
+        #	$result.text = String(self.callv("ans"+"wer", Array([42])))
+      	$result.text = String(context.evaluate_string($input.text))
+
+        func answer42():
+	        return(42)
+
+        func answer(number):
+	        return(number)
+
+  + cherry-picks
+
+    + multiline-comments
+
+      Introduces C-Style /* */ comments to GDScript like proposed in [#18228](https://github.com/godotengine/godot/issues/18228).
+
+# 2018-04-12
 + GDScript
   + performance improvements in method lookup
   + new binary literals in form 0b[01]*
@@ -24,7 +72,7 @@
       luaVM_instance.run_file("hello_world.lua")
       String(luaVM_instance.call_function("factorial", 5))
 
-# 4.4.2018
+# 2018-04-04
 + Intermediate build & synch with master
   I am still working on LUA integration.
 # 24.3.2018
@@ -43,11 +91,11 @@
 + Internal advances on LuaScript
 + Prepared other modules for inclusion
 
-# 21.3.2018
+# 2018-03-224
 + Added Steam
 + Internal engine optimizations
 + internal LUA work
-# 19.3.2018
+# 2018-03-19
 + Added libopenmpt
 + Added mono
 + improved LuaScript
@@ -55,7 +103,7 @@
 + added Smaple projects in Projects.7z
 + Engine Refactorings to load more DLLs as GD-CPP-Natives
 
-# 15.3.2018
+# 2018-03-15
 + Added Environment Variables
   + **GODOT_LSW_PATH** has priority over APPDATA
   + **GODOT_LSW_DATA_PATH**
@@ -94,7 +142,7 @@
         var sqlite_module = preload("user://gd-modules/gdsqlite.gdns");
 
     The adopted example is provided under GD-Projects/SQLite
-# 11.3.2018
+# 2018-03-11
 + added extended logging to Project-Settings file (godot.project)
 
   it is now possible to specify whether warnings/errors/failures should be logged in extended 8 including source file-name ) or short form:
@@ -112,12 +160,12 @@
   A DLL, containing C++ engine code - produced with the Godot3-LSW SDK, can now
   loaded with preset(Path.gdns). 
 
-# 3.3.2018
+# 2018-03-03
 
 + Added a new **Dlls** Tab to Project-settings. The Tab shows all DLLs, currently loaded
 
-# 27.2.2018
+# 2018-02-27
 + Added a new Menu **Update** to Editor/help. A currently empty update Dialog is popped up, which will show later new Versions of DLLs found on a [WinSparke](https://winsparkle.org) enabled Server.
 
-# 23.2.2018
+# 2018-02-23
 + Added [symbol-files](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64-pdb.7z) to enable a memaningful stack-trace
