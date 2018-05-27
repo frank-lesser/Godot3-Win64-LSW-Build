@@ -23,7 +23,7 @@ Also almost all of the other DLLs currently contained in the root-folder and loa
 
 ## New in build v. 2018-5-27
 
-+ the build has been synchronized with 3.03-rc2 dev-master commit [130fd6b](https://github.com/godotengine/godot/commit/130fd6bcb88d7b297b13c3ed20a715b5ab9cce47) v. 15. May 2018
++ the build has been synchronized with 3.03-rc2 dev-master commit [130fd6b](https://github.com/godotengine/godot/commit/130fd6bcb88d7b297b13c3ed20a715b5ab9cce47) v. 26. May 2018
 + the build implements Multi-Windows.
 + the build is full modularized - The DLLs are self registering & initializing. Depending on the entries in Project-settings Godot core DLLs, like Visual-server.DLL, Audio-server.DLL, Scene_2d.DLL, Scene_3D.DLL and many others can be loaded.
 + new logging modes
