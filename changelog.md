@@ -1,5 +1,9 @@
+# 2018-05-27
++ synch with [master 130fd6b](https://github.com/godotengine/godot/commit/130fd6bcb88d7b297b13c3ed20a715b5ab9cce47)
+
 # 2018-05-12
-+ synch with [master 81b1d3c](https://github.com/godotengine/godot/commit/81b1d3c846de263cf843e9e0e9d7c0c0a94f65c8) v. 2018.5.12
++ synch with [master 81b1d3c](https://github.com/godotengine/godot/commit/81b1d3c846de263cf843e9e0e9d7c0c0a94f65c8) 
+
 dynamic registration of DLLs ( WIP ), to be able to compose the modularized Godot build DLLs, needed by the application
 
 
