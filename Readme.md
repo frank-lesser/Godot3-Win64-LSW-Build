@@ -4,7 +4,7 @@ Modularized Win x64 build of Godot 3.1-dev - without SCons
 The new [Godot 3.1-dev LSW build](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z) will be in synch with 3.1 - dev. Here is a [detailed explanation](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/changelog.md) about the build.
 
 
-It is build from a **MSVC 2017** solution with 260 sub-projects.
+It is build from a **MSVC 2017** solution with 263 sub-projects.
 The main intention is to allow a faster engine-development & produce an Godot executable which is small and startup fast and can be easily updated & extended by replacing or adding small DLL's.
 
 The modularized build has many advantages. The Godot-engine has not to be rebuild if new modules are added. New libraries can be used by preloading them in the **[singletons]** section of the ***project.godot*** file, or dynamically by adding a preload statement at the beginning of the GDScript using the GDNative class like in
@@ -21,11 +21,13 @@ Also almost all of the other DLLs currently contained in the root-folder and loa
 
 **Caution:** GD-CPP-Native is not the same as GD-Native. for loading the GD-CPP-Native DLLs the Resource-loading syntax (preload, load) is reused.
 
-## New in build v. 2018-5-27
+## New in build v. 2018-5-29
 
 + the build has been synchronized with 3.03-rc2 dev-master commit [130fd6b](https://github.com/godotengine/godot/commit/130fd6bcb88d7b297b13c3ed20a715b5ab9cce47) v. 26. May 2018
 + the build implements Multi-Windows.
 + the build is full modularized - The DLLs are self registering & initializing. Depending on the entries in Project-settings Godot core DLLs, like Visual-server.DLL, Audio-server.DLL, Scene_2d.DLL, Scene_3D.DLL and many others can be loaded.
++ a new section **[preloaded_editor_module]** has been added, which lists dlls which are only loaded if the editor is started.
+
 + new logging modes
   + mode/visual_server
   + mode/graphic_driver

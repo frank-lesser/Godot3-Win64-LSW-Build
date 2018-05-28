@@ -1,3 +1,7 @@
+# 2018-05-29
++ fixed crashes due to python36.dll on toplevel ( moved to gd-modules )
++ main.dll does not load editor.dll & editor plugin dlls, enabling small runtimes
+
 # 2018-05-27
 + synch with [master 130fd6b](https://github.com/godotengine/godot/commit/130fd6bcb88d7b297b13c3ed20a715b5ab9cce47)
 
