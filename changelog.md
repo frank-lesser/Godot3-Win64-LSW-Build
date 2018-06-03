@@ -1,3 +1,7 @@
+# 2018-06-03
+- Internal optimizations ( of instance size of C++ classes)
+- update to 3.03 rc3 dev-master commit [8684b63](https://github.com/godotengine/godot/commit/8684b631182dffebba27bdf538129818321d0d7d)
+- reduction of DLL dependencies
 # 2018-05-29
 + fixed crashes due to python36.dll on toplevel ( moved to gd-modules )
 + main.dll does not load editor.dll & editor plugin dlls, enabling small runtimes
