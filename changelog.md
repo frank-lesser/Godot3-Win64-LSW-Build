@@ -1,3 +1,10 @@
+# 2018-06-07
+- Internal optimizations 
+- shrinking of core.dll, new StringName.dll
+- moved Geometry to Math3D.dll
+- preparation for typed GDScript dll & new AnimationEditor
+- fixed crash when invoking EditorSettings dialog
+
 # 2018-06-03
 - Internal optimizations ( of instance size of C++ classes)
 - update to 3.03 rc3 dev-master commit [8684b63](https://github.com/godotengine/godot/commit/8684b631182dffebba27bdf538129818321d0d7d)
