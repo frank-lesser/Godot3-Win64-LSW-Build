@@ -1,3 +1,8 @@
+# 2018-06-10
+- Internal optimizations, unique Strings (StringName instances) takes now 4 byte instead of 8 byte
+- Sizes of Onject subclasses has been shrunken. 
+- SpingArm node has been added [master PR 18822](https://github.com/godotengine/godot/pull/18822)
+
 # 2018-06-07
 - Internal optimizations 
 - shrinking of core.dll, new StringName.dll
