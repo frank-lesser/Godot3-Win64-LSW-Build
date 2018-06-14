@@ -1,3 +1,7 @@
+# 2018-06-14
+- Synch with 3.03 maintenance release
+- Internal optimizations, preparation for Garbage-collection
+- New DLL Variant.DLL
 # 2018-06-10
 - Internal optimizations, unique Strings (StringName instances) takes now 4 byte instead of 8 byte
 - Sizes of Onject subclasses has been shrunken. 
