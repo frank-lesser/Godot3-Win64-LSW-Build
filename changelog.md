@@ -1,3 +1,8 @@
+# 2018-06-25
+- Synch with 3.05 maintenance release
+- Internal optimizations, new BaseObject.DLL, smaller Object & Node-Sizes
+- Logging output to Visual-Studio Debug-Window
+- Log file-names of *.pck files ( --path <game-path> --main-pack )
 # 2018-06-14
 - Synch with 3.03 maintenance release
 - Internal optimizations, preparation for Garbage-collection

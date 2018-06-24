@@ -23,9 +23,8 @@ Also almost all of the other DLLs currently contained in the root-folder and loa
 
 ## New in build v. 2018-6-13 ( Synch with maintenance release 3.03 )
 
-+ the build has been synchronized with 3.03-rc3 dev-master commit [4da6216](https://github.com/godotengine/godot/commit/4da621603eaf4b85dbaacb64a010ec2e62574ec5) v. 13. June 2018
-+ the build implements Multi-Windows.
-+ new SpringArm class ( in Scene3d_SpringArm.dll )
++ the build has been synchronized with 3.05-mt dev-master commit [25275de](https://github.com/godotengine/godot/commit/25275de50e31aa081cdefe0c8b3b76b6389cb6a6) v. 22. June 2018
+
 + the build is full modularized - The DLLs are self registering & initializing. Depending on the entries in Project-settings Godot core DLLs, like Visual-server.DLL, Audio-server.DLL, Scene_2d.DLL, Scene_3D.DLL and many others can be loaded.
 + a new section **[preloaded_editor_module]** has been added, which lists dlls which are only loaded if the editor is started.
 
