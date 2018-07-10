@@ -21,9 +21,9 @@ Also almost all of the other DLLs currently contained in the root-folder and loa
 
 **Caution:** GD-CPP-Native is not the same as GD-Native. for loading the GD-CPP-Native DLLs the Resource-loading syntax (preload, load) is reused.
 
-## New in build v. 2018-6-13 ( Synch with maintenance release 3.03 )
+## New in build v. 2018-7-10 ( Synch with maintenance release 3.05 )
 
-+ the build has been synchronized with 3.05-mt dev-master commit [25275de](https://github.com/godotengine/godot/commit/25275de50e31aa081cdefe0c8b3b76b6389cb6a6) v. 22. June 2018
++ the build has been synchronized with 3.05-mt dev-master commit [e2b7a68](https://github.com/godotengine/godot/commit/e2b7a68db450d0d48d005719731619a49f96b7c8) v. 10. July 2018
 
 + the build is full modularized - The DLLs are self registering & initializing. Depending on the entries in Project-settings Godot core DLLs, like Visual-server.DLL, Audio-server.DLL, Scene_2d.DLL, Scene_3D.DLL and many others can be loaded.
 + a new section **[preloaded_editor_module]** has been added, which lists dlls which are only loaded if the editor is started.

@@ -1,3 +1,5 @@
+# 2018-07-10
+- Synch with 3.05 maintenance release
 # 2018-06-25
 - Synch with 3.05 maintenance release
 - Internal optimizations, new BaseObject.DLL, smaller Object & Node-Sizes
