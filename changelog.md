@@ -1,5 +1,24 @@
+# 2018-08-10
+- the build has been synchronized with 3.1 dev-master commit [9bd5315](https://github.com/godotengine/godot/commit/9bd5315d30be8cb162bd7fee6a7db17f65b5057d) v. 7. August 2018
+
+- [PR 20137](https://github.com/godotengine/godot/pull/20137) (Reduce unnecessary COW on Vector by make writing explicit) was not taken.
+
+- CPP Object has been reduced ( sizes in Bytes x64 - build)
+
+      sizeof(Object)  = 24 - in dev-master 224
+      sizeof(Node)    = 144 - in dev-master 512
+      sizeof(Control) = 472 - in dev-master 1104 
+
+- Object::cast_to has been eliminated, the next build will eliminate Ref<T>, WeakRef<T> and replace reference counting with generational GC.
+
 # 2018-07-10
 - Synch with 3.05 maintenance release
++ the build is full modularized - The DLLs are self registering & initializing. Depending on the entries in Project-settings Godot core DLLs, like Visual-server.DLL, Audio-server.DLL, Scene_2d.DLL, Scene_3D.DLL and many others can be loaded.
++ a new section **[preloaded_editor_module]** has been added, which lists dlls which are only loaded if the editor is started.
+
++ new logging modes
+  + mode/visual_server
+  + mode/graphic_driver
 # 2018-06-25
 - Synch with 3.05 maintenance release
 - Internal optimizations, new BaseObject.DLL, smaller Object & Node-Sizes
