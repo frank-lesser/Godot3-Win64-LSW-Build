@@ -1,12 +1,17 @@
 # Godot 3.1-dev-Win64-LSW-Build
 Modularized Win x64 build of Godot 3.1-dev - without SCons
 
+I am currently working on a [major refactoring](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/gc-refactoring.md), next release is planned for mid September 2018.
+
 The new [Godot 3.1-dev LSW build](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z) will be in synch with 3.1 - dev. Here is a [change-log](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/changelog.md) for the build.
 
- DLL components of the build are described [here]((https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3-LSW.md))
+ DLL components of the build are described [here](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3-LSW.md)
 
 It is build from a **MSVC 2017** solution with 291 sub-projects.
 The main intention is to allow a faster engine-development & produce an Godot executable which is small and startup fast and can be easily updated & extended by replacing or adding small DLL's.
+
+[Godot-LSW extensibility](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot-LSW-extensibility.md) explains my plans for those interested in extending my GD build.
+
 
 The modularized build has many advantages. The Godot-engine has **not** to be rebuild if new modules are added. New libraries can be used by pre-loading them in the **[singletons]** section of the ***project.godot*** file, or dynamically by adding a pre-load statement at the beginning of the GDScript using the GDNative class like in
 
