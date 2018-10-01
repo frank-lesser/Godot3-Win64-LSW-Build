@@ -55,7 +55,7 @@ in my build
 ```
 void LineEdit::_gui_input(InputEvent*p_event) {
 
-	InputEventMouseButton* b = (InputEventMouseButton*)p_event;
+	InputEventMouseButton* b = PDOWNCAST1(InputEventMouseButton, p_event);
 	if (b) {...}
     ...
 }

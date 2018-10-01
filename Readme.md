@@ -1,7 +1,7 @@
 # Godot 3.1-dev-Win64-LSW-Build
 Modularized Win x64 build of Godot 3.1-dev - without SCons
 
-I am currently working on a [major refactoring](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/gc-refactoring.md), next release is planned for mid September 2018.
+I am currently working on a [major refactoring](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/gc-refactoring.md), next release is planned for mid October 2018.
 
 The new [Godot 3.1-dev LSW build](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/Godot3.1dev-dllbuild-lsw-Win64.7z) will be in synch with 3.1 - dev. Here is a [change-log](https://github.com/frank-lesser/Godot3-Win64-LSW-Build/blob/master/changelog.md) for the build.
 
